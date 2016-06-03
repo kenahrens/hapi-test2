@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "Hapi Test #2",
   "main": "index.js",
+  "repository": "https://github.com/kenahrens/hapi-test2.git",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ken Ahrens",
   "license": "ISC",
   "dependencies": {
+    "amqplib": "^0.4.1",
+    "boom": "^3.2.1",
     "good": "^7.0.1",
     "good-console": "^6.1.2",
     "good-squeeze": "^3.0.1",
-    "hapi": "^13.4.1"
+    "hapi": "^13.4.1",
+    "newrelic": "^1.28.0",
+    "request": "^2.72.0"
   }
 }
