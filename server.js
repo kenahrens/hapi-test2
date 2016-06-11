@@ -6,9 +6,6 @@ const Good = require('good');
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
 
-
-
-
 server.register({
     register: Good,
     options: {
