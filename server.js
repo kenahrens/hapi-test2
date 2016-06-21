@@ -2,6 +2,7 @@
 
 const Hapi = require('hapi');
 const Good = require('good');
+const Boom = require('boom');
 
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
