@@ -1,13 +1,13 @@
 'use strict';
 
-const newrelic = require('newrelic');
+const nr = require('newrelic');
 const server = require('./server.js');
 
 const urlList = [
-  'http://localhost:3000/',
-  'http://localhost:3000/pass',
-  'http://localhost:3000/failboom',
-  'http://localhost:3000/redirect'
+  '/',
+  '/pass',
+  '/failboom',
+  '/redirect'
 ];
 
 function pollInject() {
@@ -17,10 +17,12 @@ function pollInject() {
       method: 'GET',
       url: urlList[i]
     }
-    console.log('About to call ' + options.url);
-    server.inject(options, function(res) {
+    var transactionName = 'custom' + options.url;
+    console.log('About to call ' + transactionName);
+    server.inject(options, nr.createWebTransaction(transactionName, function(res) {
       console.log('Inject ' + options.url + ' code (' + res.statusCode + ')');
-    });
+      nr.endTransaction();
+    }));
   };
 
   // Re-run every 5s
