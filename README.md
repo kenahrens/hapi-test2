@@ -13,7 +13,6 @@ kahrens:hapi-test2 kahrens$ npm install
 ...
 
 kahrens:hapi-test2 kahrens$ npm start
-kahrens:hapi-test2 kahrens$ npm start
 
 > hapi-test2@1.0.0 start /Users/kahrens/Documents/github/hapi-test2
 > node server.js
