@@ -17,7 +17,6 @@
     "good-console": "^6.1.2",
     "good-squeeze": "^3.0.1",
     "hapi": "^13.4.1",
-    "newrelic": "^1.28.0",
     "request": "^2.72.0"
   }
 }
