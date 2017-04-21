@@ -3,12 +3,15 @@
 const Request = require('request');
 
 // Start calling the APIs
+var host = (process.argv.slice(2)[0] || 'localhost');
+console.log('Running load against: ' + host);
+
 const urlList = [
-    'http://localhost:3000/',
-    'http://localhost:3000/pass',
-    'http://localhost:3000/fail',
-    'http://localhost:3000/failboom',
-    'http://localhost:3000/redirect'
+    'http://' + host + ':3000/',
+    'http://' + host + ':3000/pass',
+    'http://' + host + ':3000/fail',
+    'http://' + host + ':3000/failboom',
+    'http://' + host + ':3000/redirect'
 ];
 
 let countPoll = 0;
