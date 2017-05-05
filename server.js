@@ -1,5 +1,7 @@
 'use strict';
 
+require('newrelic');
+
 const Hapi = require('hapi');
 const Good = require('good');
 const Boom = require('boom');
@@ -32,6 +34,19 @@ server.route({
         reply({ message: 'This is going to pass' });
     }
 });
+
+server.route({
+    method: 'GET',
+    path: '/slow',
+    handler: function(request, reply) {
+        var tempArr = [];
+        for (var i=1000000; i > 0; i--) {
+            tempArr.push(i);
+        }
+        tempArr.sort();
+        reply({message: 'This is a slow transaction'});
+    }
+})
 
 server.route({
     method: 'GET',
