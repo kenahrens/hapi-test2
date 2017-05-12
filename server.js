@@ -6,6 +6,8 @@ const Hapi = require('hapi');
 const Good = require('good');
 const Boom = require('boom');
 
+const getMetricEmitter = require('@newrelic/native-metrics');
+
 const server = new Hapi.Server();
 server.connection({ port: 3000 });
 
@@ -14,6 +16,16 @@ server.route({
     path: '/',
     handler: function (request, reply) {
         reply('Hello, world!');
+    }
+});
+
+server.route({
+    method: 'GET',
+    path: '/metrics',
+    handler: function (request, reply) {
+        var emitter = getMetricEmitter();
+        var loopMetrics = emitter.getLoopMetrics();
+        reply(loopMetrics);
     }
 });
 
