@@ -11,4 +11,5 @@ WORKDIR /app
 RUN yarn global add node-gyp
 
 RUN yarn install
-CMD (sleep 5; npm start)
+#CMD (sleep 5; npm start)
+CMD (sleep 5; ./node_modules/pm2/bin/pm2 start server.js --no-daemon)
