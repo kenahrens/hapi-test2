@@ -1,6 +1,7 @@
 'use strict';
 
 require('newrelic');
+require('./pm2-to-newrelic.js');
 
 const Hapi = require('hapi');
 const Good = require('good');
@@ -58,7 +59,15 @@ server.route({
         tempArr.sort();
         reply({message: 'This is a slow transaction'});
     }
-})
+});
+
+server.route({
+    method: 'GET',
+    path: '/crash',
+    handler: function(request, reply) {
+        process.exit(1);
+    }
+});
 
 server.route({
     method: 'GET',
