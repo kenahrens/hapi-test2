@@ -1,7 +1,7 @@
 const pm2 = require('pm2');
 const newrelic = require('newrelic');
 
-const DEFAULT_TIMEOUT = 5 * 1000;
+const DEFAULT_TIMEOUT = 15 * 1000;
 
 // This is a list of how many restarts per process
 var restartList = {};
