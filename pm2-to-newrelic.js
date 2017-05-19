@@ -8,14 +8,14 @@ var restartList = {};
 
 // Get the metrics from PM2
 var getMetrics = function getMetrics() {
-  console.log('- PM2 getMetrics()');
+  // console.log('- PM2 getMetrics()');
   pm2.connect(function(err) {
     if (err) {
-      console.log('- PM2 connect error: ' + err);
+      console.error('- PM2 connect error: ' + err);
     } else {
       pm2.list(function(err, list) {
         if (err) {
-          console.log('- PM2 list error: ' + err);
+          console.error('- PM2 list error: ' + err);
         } else {
           for (var i=0; i < list.length; i++) {
             // Get the metrics
@@ -27,8 +27,8 @@ var getMetrics = function getMetrics() {
             var previousRestarts = restartList[processName] || 0;
             var intervalRestarts = totalRestarts - previousRestarts;
             restartList[processName] = totalRestarts;
-            console.log('totalRestarts=' + totalRestarts);
-            console.log('intervalRestarts=' + intervalRestarts);
+            // console.log('totalRestarts=' + totalRestarts);
+            // console.log('intervalRestarts=' + intervalRestarts);
             
             // Record the metrics
             var prefix = 'Custom/PM2/' + proc.pm2_env.name + '/';
