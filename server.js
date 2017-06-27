@@ -10,7 +10,9 @@ const Boom = require('boom');
 const getMetricEmitter = require('@newrelic/native-metrics');
 
 const server = new Hapi.Server();
-server.connection({ port: 3000 });
+
+var port = process.env.PORT || '3000';
+server.connection({ port: port });
 
 server.route({
     method: 'GET',
