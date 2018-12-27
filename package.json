@@ -11,15 +11,15 @@
   "author": "Ken Ahrens",
   "license": "MIT",
   "dependencies": {
-    "@newrelic/native-metrics": "^2.1.1",
+    "@newrelic/native-metrics": "^3.1.2",
     "amqplib": "^0.4.1",
-    "boom": "^3.2.1",
-    "good": "^7.0.1",
-    "good-console": "^6.1.2",
-    "good-squeeze": "^3.0.1",
-    "hapi": "^13.4.1",
-    "newrelic": "^1.38.2",
-    "pm2": "^2.4.6",
-    "request": "^2.72.0"
+    "boom": "^7.3.0",
+    "good": "^7.3.0",
+    "good-console": "^7.1.0",
+    "good-squeeze": "^5.1.0",
+    "hapi": "^16.1.1",
+    "newrelic": "^4.13.0",
+    "pm2": "^3.2.4",
+    "request": "^2.88.0"
   }
 }
