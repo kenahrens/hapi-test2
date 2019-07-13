@@ -1397,6 +1397,11 @@ lodash@^4.17.10:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
+lodash@^4.17.14:
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
+
 lru-cache@^4.1.2:
   version "4.1.5"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-4.1.5.tgz#8bbe50ea85bed59bc9e33dcab8235ee9bcf443cd"
@@ -1569,9 +1574,10 @@ netmask@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/netmask/-/netmask-1.0.6.tgz#20297e89d86f6f6400f250d9f4f6b4c1945fcd35"
 
-newrelic@^4.13.0:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/newrelic/-/newrelic-4.13.0.tgz#b1172a60094150b5fa4cdbb78094b6ec5d01f059"
+newrelic@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/newrelic/-/newrelic-5.1.0.tgz#55b019bb6521f62c19952443cbccc54c14b5baec"
+  integrity sha512-+nz0VyMsXkPmEe/NxaGl623o7cCr9RwlQhY63DKbUJaQJeG1BjwLDTUe2PV4BKKZyvNE9kjVYlPwpaE6eu+YiA==
   dependencies:
     "@newrelic/koa" "^1.0.0"
     "@newrelic/superagent" "^1.0.0"
